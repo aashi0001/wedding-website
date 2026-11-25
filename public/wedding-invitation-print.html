@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aashish &amp; Arushi — Wedding Invitation</title>
+    <style>
+      @page { size: A4; margin: 0; }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; width: 210mm; height: 297mm; }
+      body {
+        color: #51573d;
+        background: #f7f3e9;
+        font-family: Georgia, "Times New Roman", serif;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .page {
+        position: relative;
+        width: 210mm;
+        height: 297mm;
+        overflow: hidden;
+        padding: 14mm;
+        background:
+          radial-gradient(circle at 4% 7%, rgba(118, 132, 87, .15), transparent 18%),
+          radial-gradient(circle at 96% 93%, rgba(174, 145, 87, .14), transparent 20%),
+          #f8f4ea;
+      }
+      .border { position: absolute; inset: 8mm; border: 1px solid #b6a071; }
+      .border::after { content: ""; position: absolute; inset: 2.5mm; border: 1px solid rgba(182, 160, 113, .42); }
+      .corner { position: absolute; color: #79825c; font-size: 38pt; line-height: 1; opacity: .6; }
+      .corner.tl { top: 8mm; left: 10mm; transform: rotate(-26deg); }
+      .corner.tr { top: 8mm; right: 10mm; transform: scaleX(-1) rotate(-26deg); }
+      .corner.bl { bottom: 8mm; left: 10mm; transform: rotate(155deg); }
+      .corner.br { bottom: 8mm; right: 10mm; transform: scaleX(-1) rotate(155deg); }
+      main { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 13mm 12mm 10mm; }
+      .om { color: #b08f55; font-size: 27pt; line-height: 1; }
+      .sanskrit { margin: 2mm 0 8mm; color: #827c5b; letter-spacing: .12em; font-size: 10pt; }
+      .kicker { color: #9a875e; font-family: Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: .28em; }
+      h1 { margin: 9mm 0 4mm; font-size: 46pt; font-weight: normal; line-height: .8; letter-spacing: -.04em; color: #586142; }
+      h1 em { display: block; color: #b29359; font-size: 24pt; font-style: italic; line-height: .7; }
+      .ornament { display: flex; align-items: center; gap: 4mm; margin: 8mm 0 7mm; color: #b39357; }
+      .ornament i { display: block; width: 29mm; height: 1px; background: #c7b284; }
+      .invitation { max-width: 130mm; margin: 0; color: #6d7058; font-size: 13pt; font-style: italic; line-height: 1.45; }
+      .families { width: 100%; display: grid; grid-template-columns: 1fr 13mm 1fr; align-items: center; gap: 3mm; margin: 9mm 0 8mm; }
+      .family-label { color: #a58d5b; font-family: Arial, sans-serif; font-size: 6.5pt; letter-spacing: .2em; }
+      .family-name { margin: 2mm 0 1mm; font-size: 14pt; color: #555c43; }
+      .family-detail { color: #777761; font-size: 10pt; }
+      .heart { color: #b29359; font-size: 19pt; }
+      .date { margin-top: 1mm; padding: 4mm 8mm; border-top: 1px solid #b7a273; border-bottom: 1px solid #b7a273; color: #5e6848; }
+      .date strong { display: block; font-size: 29pt; font-weight: normal; line-height: .9; }
+      .date span { display: block; margin-top: 2mm; color: #8d805e; font-family: Arial, sans-serif; font-size: 7.5pt; letter-spacing: .2em; }
+      .venue { margin-top: 9mm; color: #66704d; }
+      .venue .label { color: #a38b5b; font-family: Arial, sans-serif; font-size: 6.5pt; font-weight: bold; letter-spacing: .25em; }
+      .venue h2 { margin: 3mm 0 2mm; font-size: 20pt; font-weight: normal; }
+      .venue p { max-width: 122mm; margin: 0; color: #747360; font-size: 10.5pt; line-height: 1.35; }
+      .venue-layout { display: flex; align-items: center; justify-content: center; gap: 8mm; margin-top: 2mm; }
+      .venue-layout > div:first-child { max-width: 112mm; }
+      .qr { width: 25mm; height: 25mm; padding: 1.5mm; background: #fffdf7; border: 1px solid #b7a273; }
+      .qr-note { margin-top: 1.5mm !important; color: #98835a !important; font-family: Arial, sans-serif; font-size: 5.5pt !important; letter-spacing: .12em; }
+      .blessing { margin-top: auto; color: #7b7b61; font-size: 11pt; font-style: italic; }
+      .closing { margin: 3mm 0 0; color: #9b8758; font-family: Arial, sans-serif; font-size: 6.5pt; letter-spacing: .2em; }
+    </style>
+  </head>
+  <body>
+    <article class="page">
+      <div class="border"></div>
+      <div class="corner tl">❧</div><div class="corner tr">❧</div>
+      <div class="corner bl">❧</div><div class="corner br">❧</div>
+      <main>
+        <div class="om">ॐ</div>
+        <p class="sanskrit">॥ श्री गणेशाय नमः ॥ &nbsp; शुभविवाहे सुस्वागतम्</p>
+        <div class="kicker">TOGETHER WITH THEIR FAMILIES</div>
+        <h1>Aashish <em>&amp;</em> Arushi</h1>
+        <div class="ornament"><i></i> ✦ <i></i></div>
+        <p class="invitation">With the blessings of our elders, we joyfully invite you to celebrate the beginning of our forever.</p>
+        <section class="families">
+          <div><div class="family-label">SON OF</div><div class="family-name">Raman Khullar</div><div class="family-detail">&amp; Savita Khullar</div></div>
+          <div class="heart">♡</div>
+          <div><div class="family-label">DAUGHTER OF</div><div class="family-name">Amaresh Sachdeva</div><div class="family-detail">&amp; Manju Sachdeva</div></div>
+        </section>
+        <section class="date"><strong>12 DECEMBER 2026</strong><span>SATURDAY · 11:00 AM</span></section>
+        <section class="venue"><div class="label">THE CELEBRATION</div><h2>Heritage Haveli — Sheesh Mahal</h2><div class="venue-layout"><div><p>Jalandhar–Phagwara Highway, Near Khajurla,<br />Jalandhar, Punjab, India</p><p class="qr-note">SCAN FOR DIRECTIONS</p></div><img class="qr" src="location-qr.svg" alt="QR code for venue directions" /></div></section>
+        <p class="blessing">Your presence is our present.</p>
+        <p class="closing">WITH LOVE &amp; BEST COMPLIMENTS · THE KHULLAR &amp; SACHDEVA FAMILIES</p>
+      </main>
+    </article>
+  </body>
+</html>
