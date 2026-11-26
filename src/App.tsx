@@ -438,7 +438,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const photos = useMemo(() => galleryPhotos, []);
   const [storyIndex, setStoryIndex] = useState(0);
-  const storyPhotos = [photos[0], photos[2], photos[3]];
+  const storyPhotos = [photos[0], photos[1], photos[2]];
   const musicRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
@@ -689,7 +689,7 @@ function App() {
                       VIEW ON MAPS <ArrowRight size={15} />
                     </a>
                     <p className="timing-note">
-                      <Clock3 size={14} /> Ceremony timings will be shared soon
+                      <Clock3 size={14} /> Ceremony will start by 11:00 AM.
                     </p>
                   </div>
                 </div>
