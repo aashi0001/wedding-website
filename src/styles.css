@@ -1517,12 +1517,14 @@ a {
     border-width: 6px;
   }
   .gallery-grid {
-    columns: 2;
-    column-gap: 9px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    columns: unset;
+    gap: 9px;
     margin-top: 30px;
   }
   .gallery-photo {
-    margin-bottom: 9px;
+    margin-bottom: 0;
   }
   .no-gifts-card {
     padding: 42px 18px;
@@ -1618,7 +1620,7 @@ a {
     font-size: 28px;
   }
   .gallery-grid {
-    columns: 1;
+    grid-template-columns: 1fr;
   }
 }
 @media (prefers-reduced-motion: reduce) {
